@@ -1,4 +1,4 @@
-name: Generate Ophub Firmware
+name: anang wrt
 
 on:
   workflow_dispatch:
@@ -22,19 +22,16 @@ on:
       target:
         description: "Select device board"
         required: false
-        default: "Amlogic s905x B860H"
+        default: "all-device"
         type: choice
         options:
           - all-device
           - Amlogic s905x HG680P
           - Amlogic s905x B860H
-          - Amlogic s922x GT-King-Pro
-          - Amlogic s905x2 HG680-FJ
-          - Amlogic s905x2 B860Hv5
       tunnel:
         description: "Select Tunnel VPN"
         required: true
-        default: "openclash"
+        default: "openclash-nikki"
         type: choice
         options:
           - openclash
@@ -87,8 +84,6 @@ jobs:
             "target": [
               "Amlogic s905x HG680P",
               "Amlogic s905x B860H",
-              "Amlogic s905x2 HG680-FJ",
-              "Amlogic s905x2 B860Hv5",
             ]
           }
           EOJ
